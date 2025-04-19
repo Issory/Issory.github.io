@@ -22,7 +22,6 @@ few-shot classification
     - $${p_{\phi}(y=k|x) = \frac{\exp(-d(f_{\phi}(x)),c_k)}{\sum_{k'}\exp(-d(f_{\phi}(x)),c_{k'})}}$$
     where $d$ is the distance function.
     - $\arg\min J(\phi)=-\log p_{\phi}(y=k|x)$
-![Fig1](https://github.com/Issory/issory.github.io/blob/master/img/2019-07-11-PaperReading-02-prototypical/Fig1.png?raw=true)
-
+![Crepe](/assets/img/2019-07-11-PaperReading-02-prototypical/Fig1.png)
 # Keras Implementation
 [See in Github](https://github.com/issory/prototypical-network) 
