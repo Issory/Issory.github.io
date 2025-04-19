@@ -2,9 +2,11 @@
 layout: post
 title: Understanding of "Prototpical Networks for Few-shot Learning"
 tags: [paper,deep learning,few shot]
-#gh-repo: daattali/beautiful-jekyll
-#gh-badge: [star, fork, follow]
+gh-repo: daattali/beautiful-jekyll
+gh-badge: [star, fork, follow]
+tags: [test]
 comments: true
+mathjax: true
 ---
 # Objective
 few-shot classification
