@@ -2,9 +2,10 @@
 layout: post
 title: Understanding of "Design Light-Weight 3D Convolutional Networks"
 tags: [paper,temporal,deep learning,fast]
-#gh-repo: daattali/beautiful-jekyll
-#gh-badge: [star, fork, follow]
+gh-repo: daattali/beautiful-jekyll
+gh-badge: [star, fork, follow]
 comments: true
+mathjax: true
 ---
 # Objective
 Deep 3D CNN for spatio-temporal information fusion ability
@@ -26,32 +27,32 @@ Deep 3D CNN for spatio-temporal information fusion ability
 # Method
 1. Fully separable block
     - Stage One
-        - temporal pixel for temporal features $(\alpha N,C,K,1,1)$
+        - temporal pixel for temporal features $$(\alpha N,C,K,1,1)$$
         - 2D convolution kernels for spatial features 
     - Stage Two
-        - convolution in single channel $(\alpha N,1,1,R,S)$
-        - $1\times1\times1$ kernels at last $(N, \alpha N,1,1,1)$
-    - Memory cost $\alpha NCK +\alpha NRS +\alpha N^2$
-    ![Fig1](https://github.com/Issory/issory.github.io/blob/master/img/2019-07-07-PaperReading-01-Temporal-CNN/Fig1.png?raw=true)
+        - convolution in single channel $$(\alpha N,1,1,R,S)$$
+        - $$1\times1\times1$$ kernels at last $$(N, \alpha N,1,1,1)$$
+    - Memory cost $$\alpha NCK +\alpha NRS +\alpha N^2$$
+    ![Crepe](/assets/img/2019-07-07-PaperReading-01-Temporal-CNN/Fig1.png)
 {: .box-note} **Note that**
-    - The input $N(Channel)\times C(Batch Size)\times T(Thick) \times H(Height) \times W(weight)$
-    - The kernel $(N(Channel),C(Batch Size),K,R,S)$
-    - Traditional memory cost $N\times C\times K\times R\times S$
+    - The input $$N(Channel)\times C(Batch Size)\times T(Thick) \times H(Height) \times W(weight)$$
+    - The kernel $$(N(Channel),C(Batch Size),K,R,S)$$
+    - Traditional memory cost $$N\times C\times K\times R\times S$$
 
 
 2. Temporal residual gradient
-    - In single channel, $T$ time steps has $T-1$ temporal residual gradient in pixel.
+    - In single channel, $$T$$time steps has $$T-1$$ temporal residual gradient in pixel.
     - Mean of $T$ time steps is added for statistical distribution
-    ![Fig2](https://github.com/Issory/issory.github.io/blob/master/img/2019-07-07-PaperReading-01-Temporal-CNN/Fig2.png?raw=true)
+    ![Crepe](/assets/img/img/2019-07-07-PaperReading-01-Temporal-CNN/Fig2.png?raw=true)
 
 3. Fast Algorithm[1](#1)
     - Core:
         - 1D 
-            - Traditional Multiplicatoins for Convolution: Kernel size $(m,r)->(m\times r)$ 
-            - Fast Algorithms: $(m,r)->(m+r-1)$
+            - Traditional Multiplicatoins for Convolution: Kernel size $$(m,r)->(m\times r)$ $
+            - Fast Algorithms: $$(m,r)->(m+r-1)$$
         - 2D
-            - Traditional Multiplicatoins for Convolution: Kernel size $(m\times m,r\times r)->(m^2\times r^2)$ 
-            - Fast Algorithms: $(m,r)->(m+r-1)^2$
+            - Traditional Multiplicatoins for Convolution: Kernel size $$(m\times m,r\times r)->(m^2\times r^2)$$ 
+            - Fast Algorithms: $$(m,r)->(m+r-1)^2$$
 
 # Reference
 

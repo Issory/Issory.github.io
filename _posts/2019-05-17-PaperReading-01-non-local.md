@@ -2,9 +2,10 @@
 layout: post
 title: Understanding of "Non-local Block"
 tags: [paper,no-local,deep learning]
-#gh-repo: daattali/beautiful-jekyll
-#gh-badge: [star, fork, follow]
+gh-repo: daattali/beautiful-jekyll
+gh-badge: [star, fork, follow]
 comments: true
+mathjax: true
 ---
 # Feature of Non-local operation[1](#1)
 - capture long-range dependency
@@ -28,13 +29,13 @@ comments: true
 ## Notification
 {: .box-note}
 **Note:** The Comparsion of different architectures [[7](#7)].
-![Fig1](https://github.com/Issory/issory.github.io/blob/master/img/2019-05-17-PaperReading-01/Fig1.jpg?raw=true)
+![Crepe](/assets/img/2019-05-17-PaperReading-01/Fig1.jpg?raw=true)
 
 # Formulation[1](#1)
 $$\mathbf{y}_ i=\frac{1}{\mathcal{C}(x)}\sum\limits_{\forall j}{f(\mathbf{x}_ i,\mathbf{x}_ j)g(\mathbf{x}_ j)}$$
-- $f(\mathbf{x}_ i,\mathbf{x}_ j)$ is the affinity matrix between $i$ and $j$.
-- $g(\mathbf{x}_ j)$ is the input of position $j$
-- $\mathcal{C}(x)$ is the normlization factor
+- $$f(\mathbf{x}_ i,\mathbf{x}_ j)$$ is the affinity matrix between $$i$$ and $$j$$.
+- $$g(\mathbf{x}_ j)$$ is the input of position $$j$$
+- $$\mathcal{C}(x)$$ is the normlization factor
 
 # Variant of Non-local operation
 - Generalized Compact Non-Local Module [[11](#11)].([See in Github]())

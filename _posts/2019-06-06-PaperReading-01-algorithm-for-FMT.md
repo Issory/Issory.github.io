@@ -2,14 +2,17 @@
 layout: post
 title: The Conclusion of FMT between 2019.01-2019.06
 tags: [paper,FMT,algorithm]
+gh-repo: daattali/beautiful-jekyll
+gh-badge: [star, fork, follow]
 comments: true
+mathjax: true
 ---
 # Method
 
 ## Regularization
 
 - nonlocal total variation regularization method[1](#1) for morphology
-- modified $\ell_{2,1}$-norm method for morphology
+- modified $$\ell_{2,1}$$-norm method for morphology
 
 
 # Reference
